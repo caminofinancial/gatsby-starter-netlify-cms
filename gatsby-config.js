@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Camino Financial Tech Blog',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Camino Financial is a data-driven financial technology platform pioneering affordable credit and financial products for U.S. The Tech Blog provides interesting technical insights on our day-to-day engineering projects.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
