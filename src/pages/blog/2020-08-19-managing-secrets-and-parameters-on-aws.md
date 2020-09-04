@@ -3,12 +3,14 @@ templateKey: blog-post
 title: Managing Secrets and Parameters on AWS
 date: 2020-08-19T22:47:50.691Z
 description: >-
-    What services we used to manage our secrets and good practices we've learned through the process.  Written by Ben Limpanukorn.
+    Deploying any application requires careful handling of parameters and secrets.  AWS provides several options to help manage changes and secure access to critical secrets.
 featuredpost: true
 featuredimage: /img/aws.png
 tags:
   - DevOps
 ---
+Written by Ben Limpanukorn.
+
 If you’re building a web application nowadays, chances are you’ll need to interface with external services.  Whether you’re dealing with API keys or database credentials, at some point you’ll need to think about how to manage these secrets in different environments from development to production.
 
 Individuals and small teams working on private codebases might be tempted to simply embed these secrets in their source code reasoning that only trusted team members would have access.  However, this can be a liability if a developer leaves or if snippets of the code are leaked accidentally.  There's also the possibility of unintentionally modifying production resources while testing or developing new features.
