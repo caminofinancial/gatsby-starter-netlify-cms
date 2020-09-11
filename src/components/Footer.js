@@ -27,6 +27,16 @@ const Footer = class extends React.Component {
                         About
                       </Link>
                     </li>
+                    <li>
+                      <Link className="navbar-item">
+                        309 E 8th St #601, Los Angeles, CA 90014 USA
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="navbar-item">
+                          hr@caminofinancial.com
+                      </Link>
+                    </li>
                   </ul>
                 </section>
               </div>
