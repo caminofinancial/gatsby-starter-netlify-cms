@@ -59,7 +59,7 @@ As you can see, there are over 100,000 data points that are ready to be analyzed
 
 ## Probability Background
 
-We can represent a user’s journey through our website as a discrete-time Markov chain. A Markov chain is a stochastic model describing a sequence of possible events in which the probability of each event depends only on the state attained in the previous event. In simpler terms, it is a memoryless system whose current state relies ONLY on the previous state and is probabilistically independent of the system’s states that occurred before the previous state. For example, if a user visited our home page, then visited the blog, and is now at the loan application, the probability that they now finish the loan application is only dependent on the probability that a user finishes the loan application given that they were on the loan application, denoted by $$P[User\ finishes\ the\ loan\ application\ |\ User\ is\ on\ the\ loan\ application]$$ The fact that the user visited our home page and the blog does not factor into our calculation, thus the system is memoryless.
+We can represent a user’s journey through our website as a discrete-time Markov chain. A Markov chain is a stochastic model describing a sequence of possible events in which the probability of each event depends only on the state attained in the previous event. In simpler terms, it is a memoryless system whose current state relies ONLY on the previous state and is probabilistically independent of the system’s states that occurred before the previous state. For example, if a user visited our home page, then visited the blog, and is now at the loan application, the probability that they now finish the loan application is only dependent on the probability that a user finishes the loan application given that they were on the loan application, denoted by P[User finishes the loan application | User is on the loan application] The fact that the user visited our home page and the blog does not factor into our calculation, thus the system is memoryless.
 
 ## Visualization
 
@@ -80,7 +80,7 @@ FILENAME = './data/Aggregate_Tracks_SF_Opportunities_Closed_2019_08_20.csv'
 df = pd.read_csv(FILENAME)
 ```
 
-We can loop through each user’s events chronologically to construct a matrix counting the number of times an action $j$ was taken given that action $i$ was taken. First, we need to initialize the matrix. We can grab all the unique event names (actions) from our data and initialize a dataframe of all zeros that will represent our matrix.
+We can loop through each user’s events chronologically to construct a matrix counting the number of times an action j was taken given that action i was taken. First, we need to initialize the matrix. We can grab all the unique event names (actions) from our data and initialize a dataframe of all zeros that will represent our matrix.
 
 ```
 column_names = df.event.unique()
@@ -113,7 +113,7 @@ transition_matrix.head()
 
 ![Count Matrix](/img/transition-matrix.png)
 
-We can then normalize the rows and filter out uncommon events. We can call the normalized matrix a transition matrix that represents the probability of a user taking an action given their current state. Each entry $i$, $j$ in this transition matrix represents the probability of taking action $j$, given that they just took action $i$ (denoted as $P[j\ |\ i]$).
+We can then normalize the rows and filter out uncommon events. We can call the normalized matrix a transition matrix that represents the probability of a user taking an action given their current state. Each entry i, j in this transition matrix represents the probability of taking action j, given that they just took action i (denoted as P[j | i]).
 
 ```
 #Take out all events that don't have more than 2500 occurences
@@ -153,11 +153,11 @@ names = list(cleaned_matrix.columns)
 chord.Chord(matrix, names, width=700, padding=0.1).show()
 ```
 
-![Chord]((/img/chord.png))
+![Chord](/img/chord.png)
 
 You can hover over individual arcs in the chord diagram to display statistics about that arc.
 
-![Arc]((/img/arc.png))
+![Arc](/img/arc.png)
 
 ## Analysis
 Now that we can visualize the data better, what kind of conclusions can we draw from it? It can be seen that the heatmap is concentrated along the diagonal, indicating that many users take repeated actions. This makes sense because a user often makes multiple actions, like clicking a button, for example. Additionally, we can see that many squares are black either because it is unlikely for a user to make that transition (i.e a small button) or just flat-out impossible (i.e that button doesn’t exist on the previous action’s webpage). Using this information, we can maximize the probability that a user takes a certain action. For instance, we could increase the noticeability of a certain button we want a user to click.
