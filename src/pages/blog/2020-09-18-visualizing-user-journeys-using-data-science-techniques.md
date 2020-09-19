@@ -53,7 +53,7 @@ WHERE e.event NOT IN ('click_link', 'change_value') AND e.ip_address = u.ip_addr
 ORDER BY email, timestamp
 ```
 
-![SQL Result](/img/sql-result.png)
+![SQL Result](/img/sql-results.png)
 
 As you can see, there are over 100,000 data points that are ready to be analyzed! You can also filter the opportunities by the ones that are NOT closed, which could give a good sense of what type of user usually ends up in an inactive loan.
 
