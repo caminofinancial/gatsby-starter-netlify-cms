@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Scaling an old monolithic Django web app
 date: 2020-09-10T15:04:10.000Z
 description: Monolithic apps could be a challenge to scale, especially one that's ladden with technical debt. This is how we did it!
-featuredpost: true
+featuredpost: false
 featuredimage: /img/pipeline1.png
 tags:
   - Devops

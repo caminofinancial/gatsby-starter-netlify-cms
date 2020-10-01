@@ -3,7 +3,7 @@ templateKey: index-page
 title: Camino Financial Tech Blog
 image: /img/home-jumbotron.jpg
 heading: Lorem ipsum dolor sit amet
-subheading: Engineering Power without limits!
+subheading: Engineering and Data Power without limits!
 mainpitch:
   title: Lorem ipsum dolor sit amet
   description: >

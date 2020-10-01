@@ -7,7 +7,7 @@ description: >-
 featuredpost: true
 featuredimage: /img/aws.png
 tags:
-  - DevOps
+  - Devops
 ---
 Written by Ben Limpanukorn.
 
