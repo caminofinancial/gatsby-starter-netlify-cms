@@ -6,7 +6,7 @@ description: Monolithic apps could be a challenge to scale, especially one that'
 featuredpost: false
 featuredimage: /img/pipeline1.png
 tags:
-  - Devops
+  - devops
 ---
 Written by Cho-Nan Tsai. Special thanks to Ben Limpanukorn.
 

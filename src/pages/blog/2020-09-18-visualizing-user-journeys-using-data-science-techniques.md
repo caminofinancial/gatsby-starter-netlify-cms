@@ -6,7 +6,7 @@ description: Making sense of your user data is essential. Here are some analysis
 featuredpost: true
 featuredimage: /img/pandas-logo.png
 tags:
-  - Datascience
+  - datascience
 ---
 Written by William Huang.
 
